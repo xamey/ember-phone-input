@@ -5,6 +5,7 @@ import { isPresent } from '@ember/utils';
 import Component from '@glimmer/component';
 import type Owner from '@ember/owner';
 import type PhoneInputService from '../services/phone-input';
+import { fr } from 'intl-tel-input/i18n';
 
 import 'intl-tel-input/build/css/intlTelInput.css';
 import '../styles/styles.css';
@@ -318,6 +319,7 @@ export default class PhoneInputComponent extends Component<PhoneInputSignature> 
     const options: intlTelInput.Options = {
       autoInsertDialCode: false,
       nationalMode: true,
+      i18n: fr,
       allowDropdown,
       autoPlaceholder,
       initialCountry,
